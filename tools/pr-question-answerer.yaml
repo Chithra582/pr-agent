@@ -1,0 +1,20 @@
+name: "pr-question-answerer"
+description: "Answers questions regarding PR architecture, impact, and dependencies using context-aware retrieval."
+input_schema:
+  type: object
+  properties:
+    pr_url:
+      type: string
+      description: "Full URL of the pull request."
+    question:
+      type: string
+      description: "Developer question regarding code changes or architecture."
+    line_number:
+      type: integer
+      description: "Optional line number if asking about a specific line in a file."
+    file_path:
+      type: string
+      description: "Optional relative path of the file related to the question."
+  required:
+    - pr_url
+    - question

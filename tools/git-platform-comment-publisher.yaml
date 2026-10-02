@@ -1,0 +1,31 @@
+name: "git-platform-comment-publisher"
+description: "Publishes review comments, PR descriptions, and labels to GitHub, GitLab, Bitbucket, and Azure DevOps."
+input_schema:
+  type: object
+  properties:
+    pr_url:
+      type: string
+      description: "Full URL of the target pull request."
+    comment_body:
+      type: string
+      description: "Markdown formatted comment body to publish."
+    comment_type:
+      type: string
+      enum:
+        - "main_review"
+        - "inline_comment"
+        - "pr_description_update"
+        - "label_update"
+      description: "Target publication destination."
+    inline_target:
+      type: object
+      properties:
+        file_path:
+          type: string
+        line_number:
+          type: integer
+      description: "Target file path and line number when publishing inline comments."
+  required:
+    - pr_url
+    - comment_body
+    - comment_type

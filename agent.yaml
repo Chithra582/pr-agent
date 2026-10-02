@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "pr-agent"
+version: "0.46.0"
+description: "Autonomous AI pull request reviewer and handler providing automated code reviews, descriptions, improvements, and test generation."
+author: "QodoAI & OpenGAP Contributors"
+license: "MIT"
+metadata:
+  domain: "Developer Tools / Automated Code Review & Git Pull Request Automation"
+  category: "Developer Tools"
+  framework: "PR-Agent Python CLI, GitHub Actions & GitLab/Bitbucket Webhook Server"
+  language: "Python"
+skills:
+  - "pull-request-code-review"
+  - "automated-pr-description-generation"
+  - "committable-code-suggestions"
+  - "changelog-compliance-auditing"
+tools:
+  - "pr-diff-reviewer"
+  - "pr-description-writer"
+  - "inline-suggestion-generator"
+  - "pr-question-answerer"
+  - "git-platform-comment-publisher"

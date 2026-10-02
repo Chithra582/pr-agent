@@ -1,0 +1,22 @@
+name: "pr-diff-reviewer"
+description: "Performs deep structural review of pull request git diffs and returns categorized review feedback."
+input_schema:
+  type: object
+  properties:
+    pr_url:
+      type: string
+      description: "Full URL of the pull request to review."
+    review_level:
+      type: string
+      enum:
+        - "standard"
+        - "security_focused"
+        - "performance_focused"
+      description: "Focus area for the review analysis."
+      default: "standard"
+    incremental:
+      type: boolean
+      description: "Whether to review only newly added commits since the last review."
+      default: false
+  required:
+    - pr_url
